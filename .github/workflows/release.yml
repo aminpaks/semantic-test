@@ -59,6 +59,12 @@ jobs:
         retention-days: 1
 
   release:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     name: Release
     steps:
       - name: Checkout
