@@ -46,10 +46,14 @@ jobs:
         cd ./build
         zip -r v0.3.0.zip ./public
         tar czf v0.3.0.tar.gz ./public
-        ls -a
+        ls -a ./public
 
-    # - name: Zip artifacts
-    #   run: |
-    #     zip -r v0.3.0.zip ./public
-    #     tar czf v0.3.0.tar.gz ./public
-    #   working-directory: $GITHUB_WORKSPACE/build
+    - name: Test 2
+      run: ls -la
+
+    - name: Zip artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ env.name }}-name
+        path: ${{ github.workspace }}/build/*
+        retention-days: 1
