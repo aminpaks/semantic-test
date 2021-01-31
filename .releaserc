@@ -1,5 +1,5 @@
 {
-  'branches': ['main', 'next'],
+  'branches': [['main', { 'name': 'beta', 'prerelease': true }]],
   'plugins':
     [
       [
@@ -11,5 +11,12 @@
       ],
       '@semantic-release/release-notes-generator',
       '@semantic-release/git',
+      [
+        '@semantic-release/exec',
+        {
+          'prepareCmd': 'set-version ${nextRelease.version}',
+          'publishCmd': 'publish-package',
+        },
+      ],
     ],
 }
