@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Sync Repo
+        run: ./.github/publish.sh
+        env:
+          VERSION: ${{ github.ref }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
