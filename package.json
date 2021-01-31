@@ -5,6 +5,9 @@
   "repository": "git@github.com:aminpaks/semantic-test.git",
   "author": "Amin Pakseresht <amin.pakseresht@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "mkdir -p ./build/public && touch ./build/public/main.app"
+  },
   "dependencies": {
     "semantic-release": "^17.3.7"
   }
