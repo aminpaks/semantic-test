@@ -1,3 +1,7 @@
 {
-  "branches": ["main", "next"]
+  'branches': ['main', 'next'],
+  'plugins':
+    [
+      '@semantic-release/release-notes-generator',
+    ],
 }
