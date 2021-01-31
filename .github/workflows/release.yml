@@ -44,7 +44,9 @@ jobs:
     - name: Test
       run: |
         cd ./build
-        pwd
+        zip -r v0.3.0.zip ./public
+        tar czf v0.3.0.tar.gz ./public
+        ls -a
 
     # - name: Zip artifacts
     #   run: |
