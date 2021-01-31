@@ -42,8 +42,9 @@ jobs:
       run: yarn run build
 
     - name: Test
-      run: pwd
-      run: echo "$(ls -a .)""
+      run: |
+        pwd
+        echo "$(ls -a .)""
       working-directory: $GITHUB_WORKSPACE/build
 
     # - name: Zip artifacts
