@@ -41,6 +41,11 @@ jobs:
     - name: Build
       run: yarn run build
 
+    - name: Test
+      run: |
+        echo "$GITHUB_WORKSPACE"
+        pwd
+
     - name: Zip artifacts
       run: |
         zip -r v0.3.0.zip ./public
