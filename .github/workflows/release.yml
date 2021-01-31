@@ -39,12 +39,8 @@ jobs:
       run: yarn install --pure-lockfile --non-interactive --no-progress
     
     - name: Build
-    - run: yarn run typecheck --diagnostics
-    - run: yarn run build
+      run: yarn run build
+
     - name: Zip artifacts
       run: zip -r v0.3.0.zip public
-
-    - uses: actions/upload-artifact@v2
-      with:
-        name: my-artifact
-        path: path/to/artifact/world.txt
+      working-directory: $GITHUB_WORKSPACE/build
