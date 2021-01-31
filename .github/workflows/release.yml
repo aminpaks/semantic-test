@@ -42,5 +42,7 @@ jobs:
       run: yarn run build
 
     - name: Zip artifacts
-      run: zip -r v0.3.0.zip public
+      run: |
+        zip -r v0.3.0.zip ./public
+        tar czf v0.3.0.tar.gz ./public
       working-directory: $GITHUB_WORKSPACE/build
