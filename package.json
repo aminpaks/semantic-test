@@ -1,0 +1,11 @@
+{
+  "name": "semantic-test",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:aminpaks/semantic-test.git",
+  "author": "Amin Pakseresht <amin.pakseresht@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "semantic-release": "^17.3.7"
+  }
+}
