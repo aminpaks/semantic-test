@@ -39,12 +39,10 @@ jobs:
       run: yarn install --pure-lockfile --non-interactive --no-progress
     
     - name: Build
-      run: |
-        mkdir -p $GITHUB_WORKSPACE/build/public
-        touch $GITHUB_WORKSPACE/build/public/app.cpp
+      run: yarn run build
 
     - name: Test
-      run: echo $(`ls -a $GITHUB_WORKSPACE`)
+      run: echo $(ls -a $GITHUB_WORKSPACE/build)
       working-directory: $GITHUB_WORKSPACE/build
 
     # - name: Zip artifacts
