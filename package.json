@@ -1,14 +1,16 @@
 {
   "name": "semantic-test",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "main": "index.js",
   "repository": "git@github.com:aminpaks/semantic-test.git",
   "author": "Amin Pakseresht <amin.pakseresht@hotmail.com>",
   "license": "MIT",
+  "private": true,
   "scripts": {
-    "build": "mkdir -p ./build/public && touch ./build/public/main.app"
+    "build": "mkdir -p ./build/public && touch ./build/public/main.app",
+    "semantic-release": "semantic-release"
   },
-  "dependencies": {
+  "devDependencies": {
     "semantic-release": "^17.3.7"
   }
 }
