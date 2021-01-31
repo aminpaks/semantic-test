@@ -1,6 +1,6 @@
 {
   "name": "semantic-test",
-  "version": "0.0.0-development",
+  "version": "0.1.0",
   "main": "index.js",
   "repository": "git@github.com:aminpaks/semantic-test.git",
   "author": "Amin Pakseresht <amin.pakseresht@hotmail.com>",
@@ -8,13 +8,14 @@
   "private": true,
   "scripts": {
     "build": "mkdir -p ./build/public && touch ./build/public/main.app",
-    "semantic-release": "semantic-release"
+    "changelog": "generate-changelog"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/release-notes-generator": "^9.0.1",
+    "generate-changelog": "^1.8.0",
     "semantic-release": "^17.3.7"
   }
 }
