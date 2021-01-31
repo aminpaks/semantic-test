@@ -39,7 +39,9 @@ jobs:
       run: yarn install --pure-lockfile --non-interactive --no-progress
     
     - name: Build
-      run: yarn run build
+      run: |
+        mkdir -p $GITHUB_WORKSPACE/build/public
+        touch $GITHUB_WORKSPACE/build/public/app.cpp
 
     - name: Test
       run: echo $(`ls -a $GITHUB_WORKSPACE`)
